@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Details</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script type="text/javascript">
+
+            function getData(){
+    
+                var name=document.getElementById("txtName").value;
+                var address=document.getElementById("txtAdd").value;
+                var zipCode=document.getElementById("txtZip").value;
+                var country=document.getElementById("txtCountry").value;
+                var gender=document.getElementById("gender").value;
+                var prefer=document.getElementById("Prefernces").value;
+                var phone=document.getElementById("txtPhone").value;
+                var email=document.getElementById("txtEmail").value;
+                var password=document.getElementById("password").value;
+                var birthday=document.getElementById("dob").value;
+                var appoint=document.getElementById("apoint").value;
+
+                localStorage.setItem("txtNameLocal",name);
+                localStorage.setItem("txtAddress",address);
+                localStorage.setItem("txtZipCode",zipCode);
+                localStorage.setItem("txtCountryLocal",country);
+                localStorage.setItem("txtGender",gender);
+                localStorage.setItem("txtPreference",prefer);
+                localStorage.setItem("txtPhone",phone);
+                localStorage.setItem("txtEmail",email);
+                localStorage.setItem("txtPassword",password);
+                localStorage.setItem("txtBirthday",birthday);
+                localStorage.setItem("txtAppoint",appoint);
+
+
+    
+            sessionStorage.setItem("txtNameSession",name);
+    
+            }
+    
+        </script>    
+    </head>
+    <body>
+        <div class="container">
+            <h2>Personal Details</h2>
+
+            <!--Entry Form-->
+            <form id="formTest" name="formTest" method="get" action="report.html">
+                <table>
+                    <!--Name-->
+                    <tr>
+                        <td>
+                            <label for="txtName">Name<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtName" name="name" placeholder="Enter name"
+                             class="form-control" autocomplete="off" required  pattern="[A-Za-z0-9]+">
+                        </td>
+                    </tr>
+                    <!--Address-->
+                    <tr>
+                        <td>
+                            <label for="txtAdd">Address</label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtAdd" name="address" placeholder="Enter Address"
+                             class="form-control" autocomplete="off">
+                        </td> 
+                    </tr>
+
+                    <!--zip code-->
+                    <tr>
+                        <td><label for="txtZip">ZipCode<span class="required">*</span></label></td>
+                        <td>  <input type="text" id="txtZip" name="zip" required placeholder="Enter zipcode"
+ 
+                            autocomplete="off"
+                            class="form-control" pattern="^\d{5}$"
+
+                            oninvalid="this.setCustomValidity('Enter a 5 digit zipcode')"
+
+                            oninput="this.setCustomValidity('')">
+
+
+                      </td>
+                    </tr>
+
+                    <!--Country-->
+                    <tr>
+                        <td><label for="txtCountry">Country<span class="required">*</span></label></td>
+                        <td> <select name="country" id="txtCountry" required oninvalid="this.setCustomValidity('Please Select the country')">
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option>India</option>
+                            <option>China</option>
+                            <option>USA</option>
+                            <option>Canada</option>
+                        </select></td>
+                    </tr>
+
+                    <!--Gender-->
+                    <tr>
+
+                        <td><label for="gender">Gender<span class="required">*</span></label></td>
+
+                        <td><input type="radio" id="gender" name="gender" value="male" checked>Male<br>
+
+                            <input type="radio" id="gender" name="gender" value="female">Female
+
+                        </td>
+
+                    </tr>
+
+                    <!--Preferences-->
+                    <tr>
+                        <td><label for="Prefernces">Preferences<span class="required">*</span></label></td>
+                        <td>
+                        <input type="checkbox" name="Red" id="Prefernces" />Red<br>
+                        <input type="checkbox" name="Blue" id="Prefernces" checked/>Blue<br>
+                       <input type="checkbox" name="Green" id="Prefernces" />Green
+                    </td>
+                    </tr>
+ 
+                    <!--phone-->
+                    <tr>
+                        <td>
+                            <label for="txtPhone">Phone<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtPhone" name="Phone" class="form-control" autocomplete="off" required  pattern="^\d{10}$">
+                        </td>
+                    </tr>
+                    
+                     <!--Email-->
+                     <tr>
+                        <td>
+                            <label for="txtEmail">Email<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="email" id="txtEmail" name="email" class="form-control" autocomplete="off" required>
+                        </td>
+                    </tr>
+                    
+                    <!--password-->
+                    <tr>
+                        <td>
+                            <label for="password">Password<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="password" id="password" name="password" class="form-control" autocomplete="off" required pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,8}" placeholder="character[6-8]">
+                        </td>
+                    </tr>
+                    
+                    <!--confirm password-->
+                    <tr>
+                        <td>
+                            <label for="confirm_pass"> Confirm Password<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="password" id="confirm_pass" name="confirm_pass" class="form-control" 
+                            autocomplete="off" required pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,8}"
+                             onchange ="Validate()">
+                            <span id="validate"></span>
+                        </td>
+                    </tr>
+                    
+                    <!--Birthday-->
+                    <tr>
+                        <td><label for="dob">Birthday*</label></td>
+                        <td><input id="dob" type="date" name="dob" class="form-control" autocomplete="off" required/></td>
+                    </tr>
+
+                    <!--Appointment-->
+                    <tr>
+                        <td><label for="apoint">Appointment*</label></td>
+                        <td><input id="apoint" type="time" name="apoint" class="form-control" autocomplete="off" 
+                            required /></td>
+                    </tr>
+
+                    <!--submit-->
+                    <tr>
+                        <td><input type="submit" value="Send" class="btn btn-primary vtn-lg" onclick="getData()"></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function Validate() {
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirm_pass").value;
+                if (password != confirmPassword) {
+                    document.getElementById("validate").innerHTML="Password is not matched";
+                    return false;
+                }
+                return true;
+            }
+        </script>
+ </body>
+</html>
