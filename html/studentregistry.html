@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Student registry</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+    
+</head>
+
+<body>
+<div class="container">
+    <div class="from-group mx-auto">
+        <h2>Student registry</h2>
+        <table class="table table-striped">
+
+            <!--Id-->
+            <tr>
+                <td>
+                    <label for="id">Student Id<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="number" id="id"  placeholder="Enter Student Id"
+                     class="form-control" autocomplete="off" required >
+                </td>
+             </tr>
+        
+             <!--name-->
+             <tr>
+                <td>
+                    <label for="name">Student Name<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="text" id="name" name="studName" placeholder="Enter Student Name"
+                     class="form-control" autocomplete="off" required >
+                </td>
+             </tr>
+
+             <!--standard-->
+             <tr>
+                <td>
+                    <label for="standard">standard<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="number" id="standard"  placeholder="Enter Student standard"
+                     class="form-control" autocomplete="off" required >
+                </td>
+             </tr>
+
+             <!--age-->
+             <tr>
+                <td>
+                    <label for="age">Age<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="number" id="age"  placeholder="Enter Student age"
+                     class="form-control" autocomplete="off" required >
+                </td>
+             </tr>
+
+             <!--gender-->
+             <tr>
+                <td>
+                    <label for="gender">Gender<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="text" id="gender" name="gender"
+                     class="form-control" autocomplete="off" required >
+                </td>
+             </tr>
+
+             <!--home-->
+             <tr>
+                <td>
+                    <label for="home">home<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="text" id="home" name="home"
+                     class="form-control" autocomplete="off" required >
+                </td>
+             </tr>
+
+             <!--submit and clear-->
+            <tr>
+                <td></td>
+                <td><button id="add" onclick="addStudent()" class="btn btn-primary">Add</button>
+                    <button id="clear" onclick="clearStudent()" class="btn btn-secondary">Clear</button>
+                    <button id="update" onclick="updateStudent()" class="btn btn-secondary">Update</button></td>
+            </tr>
+        
+          
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="../js/studentregistry.js" />
+
+
+</body>
