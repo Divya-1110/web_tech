@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display Information</title>
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script type="text/javascript">
+            function displayData(){
+               document.getElementById("name").innerHTML=localStorage.getItem("txtNameLocal");
+               document.getElementById("address").innerHTML=localStorage.getItem("txtAddress");
+               document.getElementById("zipCode").innerHTML=localStorage.getItem("txtZipCode");
+               document.getElementById("country").innerHTML=localStorage.getItem("txtCountryLocal");
+               document.getElementById("gender").innerHTML=localStorage.getItem("txtGender");
+               document.getElementById("preference").innerHTML=localStorage.getItem("txtPreference");
+               document.getElementById("phone").innerHTML=localStorage.getItem("txtPhone");
+               document.getElementById("email").innerHTML=localStorage.getItem("txtEmail");
+               document.getElementById("password").innerHTML=localStorage.getItem("txtPassword");
+               document.getElementById("birthday").innerHTML=localStorage.getItem("txtBirthday");
+               document.getElementById("appointment").innerHTML=localStorage.getItem("txtAppoint");
+
+
+            }
+        </script>
+    </head>
+    <body onload="displayData()">
+        <div class="container">
+            <div class="form-group mx-auto">
+                <h2>Registered Information</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Name :</td>
+                        <td><span id="name"></span> </td>
+                    </tr>
+                    <tr>
+                        <td>ZipCode :</td>
+                        <td><span id="zipCode"></span> </td>
+                    </tr>
+                    <tr>
+                        <td>Address :</td>
+                        <td><span id="address"></span> </td>
+                    </tr>
+                    <tr>
+                        <td>Country :</td>
+                        <td><span id="country"></span> </td>
+                    </tr>
+                    <tr>
+                        <td>Gender :</td>
+                        <td><span id="gender"></span> </td>
+                    </tr>
+                    <tr>
+                        <td>Preferences:</td>
+                        <td><span id="preference"></span> </td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td><span id="phone"></span> </td>
+                    </tr><tr>
+                        <td>Email:</td>
+                        <td><span id="email"></span> </td>
+                    </tr><tr>
+                        <td>Password:</td>
+                        <td><span id="password"></span> </td>
+                    </tr><tr>
+                        <td>Birthday:</td>
+                        <td><span id="birthday"></span> </td>
+                    </tr><tr>
+                        <td>Appointment:</td>
+                        <td><span id="appointment"></span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
