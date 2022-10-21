@@ -1,0 +1,34 @@
+*{
+    margin: 2%;
+    border: 1px solid darkcyan;
+    border-radius: 6px;
+    padding: 3%;
+}
+body{
+    border: 1px solid  black;
+    border-radius: 6px;
+    background-color: darkcyan;
+
+}
+#container{
+    background-color: black;
+    color: whitesmoke;
+    align-items: center;
+    border: 1px solid black ;
+    width: 50%;
+
+
+}
+.form-item{
+    border: 1px solid black ;
+    
+}
+label{
+    border: 1px solid black ;
+}
+h2{
+    border: 1px solid darkcyan ;
+}
+button :hover{
+    background-color: black;
+}
