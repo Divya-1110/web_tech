@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Request Form</title>
+        <meta name="viewport" content="width=device-width intial-scale=1">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/requestfrom.css">
+
+    </head>
+    <body>
+   
+        <div class="container">
+            <div class="from-group mx-auto">
+                <h4>TRAVEL REQUESTOR</h4>
+        
+                
+                <table class="table table-striped">
+        
+                    <!--Id-->
+                    <tr>
+                        <td>
+                            <label for="id">Employee Id<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="number" id="id"  placeholder="employee Id"
+                             class="form-control" autocomplete="off" required >
+                        </td>
+                        <td>
+                            <label for="name">Employee Name<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="studName" placeholder="Employee Name"
+                             class="form-control" autocomplete="off" required >
+                        </td>
+                     </tr>
+                
+                     <!--name-->
+                     <tr>
+                        <td>
+                            <label for="name">Project<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="studName" class="form-control" autocomplete="off" required >
+                        </td>
+                        <td>
+                            <label for="name">Cause for travel<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="studName" 
+                             class="form-control" autocomplete="off" required >
+                        </td>
+                     </tr>
+        
+                     <!--standard-->
+                     <tr>
+                        <td>
+                            <label for="name">Source<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="studName" 
+                             class="form-control" autocomplete="off" required >
+                        </td>
+                        <td>
+                            <label for="name">Destination<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="studName" 
+                             class="form-control" autocomplete="off" required >
+                        </td>
+                       
+                     </tr>
+        
+                     <tr>
+                        <td>
+                            <label for="age">from Date<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="date" id="age" 
+                             class="form-control" autocomplete="off" required >
+                        </td>
+                    
+                            <td><label for="txtCountry">No.Of.Days<span class="required">*</span></label></td>
+                            <td> <select name="country" id="txtCountry" class="form-control" required oninvalid="this.setCustomValidity('Please Select the country')">
+                                <option value="" disabled selected hidden>Please select</option>
+                                <option>India</option>
+                                <option>China</option>
+                                <option>USA</option>
+                                <option>Canada</option>
+                            </select></td>
+                        
+                        <td>
+                            <label for="age"> to Date<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="date" id="age" 
+                             class="form-control" autocomplete="off" required >
+                        </td>
+                     </tr>
+        
+        
+                     <!--home-->
+                     <tr>
+                        <td>
+                            <label for="home">Mode of travel<span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="text" id="home" name="home"
+                             class="form-control" autocomplete="off" required >
+                        </td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+        
+                     <!--submit and clear-->
+                       <tr>
+                        <td><button id="add" onclick="addStudent()" class="btn btn-primary">Submit</button></td></tr>
+        
+                
+                  
+                </table>
+            </div>
+        </div>        
+        
+        </body>
